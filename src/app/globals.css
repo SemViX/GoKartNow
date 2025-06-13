@@ -13,6 +13,11 @@
   --color-my-border: #2A2A2A;          
 }
 
+:root{
+  --swiper-navigation-color:   #B3001B;
+  --swiper-pagination-color: #800014; 
+}
+
 body {
   background-color: var(--color-my-background);
   color: var(--color-my-text);
