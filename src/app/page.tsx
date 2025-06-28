@@ -1,5 +1,6 @@
 import AdvantagesSection from "@/components/AdvantagesSection";
 import HeroSection from "@/components/HeroSection";
+import ReviewsSection from "@/components/ReviewsSection";
 import TrackSection from "@/components/TrackSection";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection/>
       <AdvantagesSection/>
       <TrackSection/>
+      <ReviewsSection/>
     </>
   );
 }

@@ -46,3 +46,27 @@ export const TRACKS = [
     isPopular: true
   }
 ];
+
+export const REVIEWS = [
+  {
+    id: 1,
+    name: "Олена Ковальчук",
+    city: "Київ",
+    comment: "Зручно, швидко, без жодних дзвінків. Просто вибрала трек, забронювала — і через годину вже була на трасі!",
+    avatarUrl: "/avatars/olena.avif",
+  },
+  {
+    id: 2,
+    name: "Ігор Сидоренко",
+    city: "Львів",
+    comment: "Крутий сервіс! Не думав, що все так легко. Дуже сподобалась траса в Karting City.",
+    avatarUrl: "/avatars/ihor.avif",
+  },
+  {
+    id: 3,
+    name: "Марія Ткаченко",
+    city: "Одеса",
+    comment: "Зручно оплачувати онлайн, а підтримка миттєво відповіла на моє запитання.",
+    avatarUrl: "/avatars/maria.avif",
+  }
+];
