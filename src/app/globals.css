@@ -18,6 +18,10 @@
   --swiper-pagination-color: #800014; 
 }
 
+.Toastify__toast-theme--colored.Toastify__toast--success{
+  background-color: var(--color-my-success);
+}
+
 body {
   background-color: var(--color-my-background);
   color: var(--color-my-text);

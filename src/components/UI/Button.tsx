@@ -8,9 +8,10 @@ interface IButtonProps{
   icon?: LucideIcon;
   onClick?: () => void;
   className?: string;
+  type?: "button" | "submit"
 }
 
-const Button = ({text, style, icon:Icon, onClick, className}:IButtonProps) => {
+const Button = ({text, style, icon:Icon, onClick, className, type}:IButtonProps) => {
   const styles = {
     "primary": "bg-my-primary rounded-xl  text-lg font-bold hover:bg-my-primary-dark hover:text-my-text-muted shadow-lg shadow-my-primary-dark hover:shadow-my-surface",
     "secondary": " border-2 border-my-primary rounded-lg text-md font-semibold hover:border-my-primary-dark hover:bg-my-surface/20 hover:text-my-text-muted shadow-sm shadow-my-primary-dark hover:shadow-my-surface"
@@ -20,6 +21,7 @@ const Button = ({text, style, icon:Icon, onClick, className}:IButtonProps) => {
     <button 
       className={clsx("my-3 transition-colors duration-200 ease-in-out flex items-center justify-center gap-3", styles, className)}
       onClick={onClick}
+      type={type}
     >
       {text}
       {Icon && <Icon size={20}/>}

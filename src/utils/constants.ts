@@ -12,7 +12,7 @@ export const TRACKS = [
     description: "Сучасний критий трек з нічним освітленням і новими картами Sodi.",
     imageUrl: "/tracks/speed-arena-kyiv.avif",
     pricePerRace: 400,
-    duration: 10, 
+    duration: "15 / 30 / 60", 
     isPopular: true
   },
   {
@@ -22,7 +22,7 @@ export const TRACKS = [
     description: "Найдовший відкритий трек у Львові — понад 1 км крутого драйву.",
     imageUrl: "/tracks/karting-city-lviv.png",
     pricePerRace: 350,
-    duration: 8,
+    duration: "15 / 30 / 60",
     isPopular: true
   },
   {
@@ -32,7 +32,7 @@ export const TRACKS = [
     description: "Технічна траса з плавними поворотами для новачків та профі.",
     imageUrl: "/tracks/gokart-dnipro.jpg",
     pricePerRace: 300,
-    duration: 10,
+    duration: "15 / 30 / 60",
     isPopular: false
   },
   {
@@ -42,7 +42,7 @@ export const TRACKS = [
     description: "Швидкісний трек біля моря з чудовим видом та сучасним обладнанням.",
     imageUrl: "/tracks/extreme-kart-odesa.avif",
     pricePerRace: 380,
-    duration: 12,
+    duration: "15 / 30 / 60",
     isPopular: true
   }
 ];
@@ -68,5 +68,40 @@ export const REVIEWS = [
     city: "Одеса",
     comment: "Зручно оплачувати онлайн, а підтримка миттєво відповіла на моє запитання.",
     avatarUrl: "/avatars/maria.avif",
+  }
+];
+
+export const faqData = [
+  {
+    question: "Скільки часу триває заїзд?",
+    answer: "Один заїзд триває від 15 до 60 хвилин — залежно від обраного пакету."
+  },
+  {
+    question: "Чи потрібне водійське посвідчення?",
+    answer: "Ні. Картинг доступний для всіх від 6 років, без ліцензій."
+  },
+  {
+    question: "Чи можна приїхати без бронювання?",
+    answer: "Так, але ми рекомендуємо бронювати заздалегідь, щоб гарантувати місце."
+  },
+  {
+    question: "Чи є обмеження за віком/зростом?",
+    answer: "Мінімальний вік — 6 років, мінімальний зріст — 120 см."
+  },
+  {
+    question: "Чи надається екіпірування?",
+    answer: "Так! Ми надаємо шолом, захист та базовий інструктаж."
+  },
+  {
+    question: "Чи можна приїхати компанією?",
+    answer: "Так! Ми приймаємо групові бронювання для компаній, свят і тимбілдингів."
+  },
+  {
+    question: "Що буде у разі дощу?",
+    answer: "Наші треки мають покриття, і більшість працює за будь-якої погоди. Але у випадку сильного дощу ми перенесемо заїзд безкоштовно."
+  },
+  {
+    question: "Як скасувати або змінити бронювання?",
+    answer: "Ви можете скасувати бронювання за 24 години до заїзду через ваш профіль або зв’язавшись із нами."
   }
 ];
