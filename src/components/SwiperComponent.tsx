@@ -11,9 +11,15 @@ import 'swiper/css/pagination';
 import Button from './UI/Button';
 import { useRouter } from 'next/navigation';
 import { pagesURL } from '@/config/pages-url.config';
+import useFavoritesStore, { ITrackTypes } from '@/store/useFavorites';
+import { useMemo } from 'react';
   
 const SwiperComponent = () => {
   const { push} = useRouter()
+  const addToFavorites = useFavoritesStore(state => state.addToFavorites)
+  const removeFromFavorites = useFavoritesStore(state => state.removeFromFavorites)
+
+
   return (
     <Swiper
       modules={[Pagination, Navigation]}
@@ -24,13 +30,20 @@ const SwiperComponent = () => {
       pagination={{clickable:true}}
     >
       {
-        TRACKS.map((item) => (
+        TRACKS.map((item) => {
+          const favorites = useFavoritesStore((state) => state.favorites);
+
+          const isFavorite = useMemo(() => {
+            return favorites.some((favoriteItem) => favoriteItem.name === item.name);
+          }, [favorites, item.name]);
+
+          return (
           <SwiperSlide 
             key={item.id}
-            className='mx-[10px] px-[50px] max-h-[500px] h-screen'  
+            className='mx-[10px] px-[50px] h-screen mb-15'  
           >
             <div
-              className='flex gap-10 my-auto items-center justify-center'
+              className='flex flex-col md:flex-row gap-10 my-auto items-center justify-center'
             >
               <Image
                 src={item.imageUrl}
@@ -61,10 +74,26 @@ const SwiperComponent = () => {
                   className='max-w-[250px] w-full h-[40px]'
                   onClick={() => push(pagesURL.BOOKING)}
                 />
+                {isFavorite?
+                  <Button
+                    text="Видалити з улюблених"
+                    style='secondary'
+                    className='max-w-[250px] w-full h-[40px]'
+                    onClick={() => removeFromFavorites(item)}
+                  />
+                  :
+                  <Button
+                    text='Додати в улюблені'
+                    style='secondary'
+                    className='max-w-[250px] w-full h-[40px]'
+                    onClick={() => addToFavorites(item)}
+                  />
+                }
+                
               </div>
             </div>
           </SwiperSlide>
-        ))
+        )})
       }
     </Swiper>
   )

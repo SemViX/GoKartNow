@@ -1,13 +1,13 @@
 import {create} from "zustand"
 
 
-interface ITrackTypes{
+export interface ITrackTypes{
     name:string;
     location:string;
     description:string;
     imageUrl: string;
     pricePerRace: number;
-    duration: "15 / 30 / 60";
+    duration: string;
 }
 
 interface IFavoritesStoreTypes{

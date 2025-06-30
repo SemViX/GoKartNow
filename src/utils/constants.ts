@@ -13,7 +13,6 @@ export const TRACKS = [
     imageUrl: "/tracks/speed-arena-kyiv.avif",
     pricePerRace: 400,
     duration: "15 / 30 / 60", 
-    isPopular: true
   },
   {
     id: 2,
@@ -23,7 +22,6 @@ export const TRACKS = [
     imageUrl: "/tracks/karting-city-lviv.png",
     pricePerRace: 350,
     duration: "15 / 30 / 60",
-    isPopular: true
   },
   {
     id: 3,
@@ -33,7 +31,6 @@ export const TRACKS = [
     imageUrl: "/tracks/gokart-dnipro.jpg",
     pricePerRace: 300,
     duration: "15 / 30 / 60",
-    isPopular: false
   },
   {
     id: 4,

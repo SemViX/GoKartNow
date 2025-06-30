@@ -1,6 +1,10 @@
 import BookingForm from '@/components/UI/BookingForm'
+import { Metadata } from 'next'
 import React from 'react'
 
+export const metadata:Metadata = {
+  title: "GoKartNow | Booking"
+}
 
 const booking = () => {
   return (
