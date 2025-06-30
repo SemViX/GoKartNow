@@ -43,7 +43,6 @@ export const TRACKS = [
     imageUrl: "/tracks/extreme-kart-odesa.avif",
     pricePerRace: 380,
     duration: "15 / 30 / 60",
-    isPopular: true
   }
 ];
 
