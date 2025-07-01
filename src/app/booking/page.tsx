@@ -3,7 +3,8 @@ import { Metadata } from 'next'
 import React from 'react'
 
 export const metadata:Metadata = {
-  title: "GoKartNow | Booking"
+  title: "GoKartNow | Booking",
+  description: "Here you can book a go-kart"
 }
 
 const booking = () => {
