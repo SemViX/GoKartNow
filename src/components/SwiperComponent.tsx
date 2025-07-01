@@ -33,9 +33,7 @@ const SwiperComponent = () => {
       {
         TRACKS.map((item) => {
 
-          const isFavorite = useMemo(() => {
-            return favorites.some((favoriteItem) => favoriteItem.name === item.name);
-          }, [favorites, item.name]);
+          const isFavorite = favorites.some((favoriteItem) => favoriteItem.name === item.name);
 
           return (
           <SwiperSlide 
