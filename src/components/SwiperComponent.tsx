@@ -12,7 +12,6 @@ import Button from './UI/Button';
 import { useRouter } from 'next/navigation';
 import { pagesURL } from '@/config/pages-url.config';
 import useFavoritesStore from '@/store/useFavorites';
-import { useMemo } from 'react';
   
 const SwiperComponent = () => {
   const { push} = useRouter()
