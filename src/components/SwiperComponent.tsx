@@ -11,13 +11,14 @@ import 'swiper/css/pagination';
 import Button from './UI/Button';
 import { useRouter } from 'next/navigation';
 import { pagesURL } from '@/config/pages-url.config';
-import useFavoritesStore, { ITrackTypes } from '@/store/useFavorites';
+import useFavoritesStore from '@/store/useFavorites';
 import { useMemo } from 'react';
   
 const SwiperComponent = () => {
   const { push} = useRouter()
   const addToFavorites = useFavoritesStore(state => state.addToFavorites)
   const removeFromFavorites = useFavoritesStore(state => state.removeFromFavorites)
+  const favorites = useFavoritesStore((state) => state.favorites);
 
 
   return (
@@ -31,7 +32,6 @@ const SwiperComponent = () => {
     >
       {
         TRACKS.map((item) => {
-          const favorites = useFavoritesStore((state) => state.favorites);
 
           const isFavorite = useMemo(() => {
             return favorites.some((favoriteItem) => favoriteItem.name === item.name);

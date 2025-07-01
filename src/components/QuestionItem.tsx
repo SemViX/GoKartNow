@@ -1,5 +1,4 @@
 'use client'
-import clsx from "clsx";
 import { Minus, Plus } from "lucide-react";
 import {motion} from "motion/react"
 import { useState } from "react";

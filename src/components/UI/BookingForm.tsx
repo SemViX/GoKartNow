@@ -19,7 +19,7 @@ export interface IFormState{
 
 
 const BookingForm = () => {
-    const {register, handleSubmit, formState: {errors}, reset} = useForm<IFormState>()
+    const {register, handleSubmit, reset} = useForm<IFormState>()
 
     const onSubmit = async (data:IFormState) => {
         try {
@@ -91,7 +91,7 @@ const BookingForm = () => {
             />
         </label>
         <label className='flex flex-col gap-1'>
-            Ім'я*
+            Ім&rsquo;я*
             <input 
                 type="text" 
                 {...register("name", {required:true})} 
